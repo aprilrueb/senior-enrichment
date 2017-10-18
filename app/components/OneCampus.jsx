@@ -1,12 +1,28 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchCampus } from '../reducers/campuses';
 
-export default function Campus (props) {
+export class Campus extends Component {
 
-  const campus = props.campus;
+  componentDidMount () {
+    const id = this.props.match.params.id;
+    this.props.fetchCampus(id);
+  }
 
-  return (
+  render() {
+    const campus = this.props.campus;
+    return (
       <div>
-        <h4>Campus</h4>
+        <h1>Campus</h1>
+          <ul className="campus-details">
+            <h1>{campus}</h1>
+          </ul>
       </div>
     );
   }
+}
+
+const mapStateToProps = ({campus}) => ({campus});
+const mapDispatchToProps = { fetchCampus };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Campus);

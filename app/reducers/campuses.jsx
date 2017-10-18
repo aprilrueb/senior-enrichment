@@ -22,21 +22,34 @@ export function gotCampusFromServer(campus){
 
 // THUNK CREATORS
 export function fetchCampuses () {
-    return function thunk (dispatch) {
-      return axios.get('/api/campuses')
-        .then(res => res.data)
-        .then(campuses => {
-          const action = gotCampusesFromServer(campuses);
-          dispatch(action);
-        });
-    };
-  }
+  return function thunk (dispatch) {
+    return axios.get('/api/campuses')
+      .then(res => res.data)
+      .then(campuses => {
+        const action = gotCampusesFromServer(campuses);
+        dispatch(action);
+      });
+  };
+}
+
+export function fetchCampus (campusId) {
+  return function thunk (dispatch) {
+    return axios.get(`/api/campuses/${campusId}`)
+      .then(res => res.data)
+      .then(campus => {
+        const action = gotCampusFromServer(campus);
+        dispatch(action);
+      });
+  };
+}
 
 // REDUCER
 const campusesReducer = function(state = [], action) {
   switch (action.type) {
     case GOT_CAMPUSES_FROM_SERVER:
       return action.campuses;
+    case GOT_CAMPUS_FROM_SERVER:
+      return action.campus;
     default:
       return state;
   }
