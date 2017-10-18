@@ -5,8 +5,8 @@ import { fetchCampus } from '../reducers/campuses';
 export class Campus extends Component {
 
   componentDidMount () {
-    const id = this.props.match.params.id;
-    this.props.fetchCampus(id);
+    const campusId = this.props.match.params.id;
+    this.props.fetchCampus(campusId);
   }
 
   render() {

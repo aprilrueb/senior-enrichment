@@ -21,8 +21,10 @@ export class Root extends Component {
         <main>
           <Switch>
             <Route exact path="/" component={Campuses} />
+            <Route exact path="/campuses" component={Campuses} />
             <Route path="/students" component={Students} />
             <Route path="/campuses/:id" component={Campus} />
+            <Redirect to="/" />
           </Switch>
         </main>
       </div>

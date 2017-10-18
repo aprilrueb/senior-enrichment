@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import axios from 'axios';
 
 // ACTION TYPES
