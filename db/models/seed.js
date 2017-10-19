@@ -47,25 +47,25 @@ var data = {
       name: 'New York University',
       address: '70 Washington Square South New York, NY, 10012',
       phone: '212-998-1212',
-      image: '..../public/images/rsz_nyu.jpg'
+      image: '/images/nyu.jpg'
     },
     {
       name: 'Columbia University',
       address: '116th St & Broadway, New York, NY 10027',
       phone: '212-854-1754',
-      image: '..../public/images/rsz_columbia.jpg'
+      image: '/images/columbia.jpg'
     },
     {
       name: 'Fordham University',
       address: '113 W 60th Street New York, NY 10023',
       phone: '212-636-6000',
-      image: '..../public/images/rsz_fordham.jpg'
+      image: '/images/fordham.jpg'
     },
     {
       name: 'Fashion Institute of Technology',
       address: '227 W 27th St, New York, NY 10001',
       phone: '212-217-7999',
-      image: '..../public/images/rsz_fit.jpg'
+      image: '/images/fit.jpg'
     }
   ]
 };
