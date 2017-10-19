@@ -7,13 +7,17 @@ const Sequelize = require('sequelize');
 
 const Student = db.define('student', {
     name: {
-      type: Sequelize.STRING,
-      allowNull: false
+      type: Sequelize.STRING
     },
     email: {
       type: Sequelize.STRING,
-      allowNull: false,
       isEmail: true
+    },
+    year: {
+      type: Sequelize.STRING
+    },
+    major: {
+      type: Sequelize.STRING
     }
   }
 );

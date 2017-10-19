@@ -7,8 +7,13 @@ const Sequelize = require('sequelize');
 
 const Campus = db.define('campus', {
     name: {
+      type: Sequelize.STRING
+    },
+    address: {
       type: Sequelize.STRING,
-      allowNull: false
+    },
+    phone: {
+      type: Sequelize.STRING
     },
     image: {
       type: Sequelize.STRING

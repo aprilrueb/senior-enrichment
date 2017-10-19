@@ -7,7 +7,7 @@ export class Campuses extends Component {
     const campuses = this.props.campuses;
     return (
       <div>
-        <h1>All Available Campuses</h1>
+        <h1>The Best NYC Colleges</h1>
           <ul className="campus-list">
             {campuses.map(campus =>
                 <h3 key={campus.id}>
@@ -16,15 +16,15 @@ export class Campuses extends Component {
                       {campus.name}
                     </Link>
                   </li>
-                </h3>)
-            }
+                </h3>
+              )}
           </ul>
       </div>
     );
   }
 }
 
-const mapStateToProps = ({campuses}, ownProps) => ({campuses, ownProps});
+const mapStateToProps = ({campuses}) => ({campuses});
 const mapDispatchToProps = null;
 
 export default connect(mapStateToProps, mapDispatchToProps)(Campuses);
