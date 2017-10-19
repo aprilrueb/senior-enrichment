@@ -7,9 +7,9 @@ export class Students extends Component {
     const students = this.props.students;
     return (
       <div>
-        <h1>Students</h1>
+        <h1>All Available Students</h1>
           <ul className="student-list">
-            {students.map(student => <h1 key={student.id}>{student.name}</h1>)}
+            {students.map(student => <h3 key={student.id}><li>{student.name}</li></h3>)}
           </ul>
       </div>
     );
