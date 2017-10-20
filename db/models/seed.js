@@ -87,9 +87,9 @@ db
     console.error('There was totally a problem', err, err.stack);
   })
   .finally(function() {
-    db.close(); // uses promises but does not return a promise. https://github.com/sequelize/sequelize/pull/5776
-    console.log('connection closed'); // the connection eventually closes, we just manually do so to end the process quickly
-    return null; // silences bluebird warning about using non-returned promises inside of handlers.
+    db.close();
+    console.log('connection closed');
+    return null;
   });
 
 // RUN: node db/models/seed.js
