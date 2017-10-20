@@ -7,18 +7,18 @@ export class Students extends Component {
     const students = this.props.students;
     return (
       <div>
-        <h1>Students</h1>
-          <ul className="student-list">
+      <div className="float-left">
+        <h3>Students</h3>
+          <ul>
             {students.map(student =>
-              <h3 key={student.id}>
-                <li>
+                <li key={student.id}>
                   <Link to={`/students/${student.id}`}>
                     {student.name}
                   </Link>
                 </li>
-              </h3>
             )}
           </ul>
+          </div>
       </div>
     );
   }

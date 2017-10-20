@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, Redirect, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Switch, Redirect, BrowserRouter as Router} from 'react-router-dom';
 import Campuses from './Campuses';
 import Campus from './OneCampus';
 import Students from './Students';
@@ -17,7 +17,8 @@ export class Root extends Component {
 
   render () {
     return (
-      <Router>
+      <div>
+        <Router>
           <Switch>
             <Route exact path="/" component={Campuses} />
             <Route exact path="/campuses" component={Campuses} />
@@ -26,7 +27,8 @@ export class Root extends Component {
             <Route path="/students/:id" component={Student} />
             <Redirect to="/" />
           </Switch>
-      </Router>
+        </Router>
+      </div>
     );
   }
 }

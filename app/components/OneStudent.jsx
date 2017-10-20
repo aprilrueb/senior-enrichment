@@ -13,12 +13,12 @@ export class Student extends Component {
     const student = this.props.student;
     return (
       <div>
-        <h1>Student Information</h1>
-          <ul className="student-details">
-            <li><h3>Name: {student.name}</h3></li>
-            <li><h3>Email: {student.email}</h3></li>
-            <li><h3>Year: {student.year}</h3></li>
-            <li><h3>Major: {student.major}</h3></li>
+        <h3>Student Information</h3>
+          <ul className="float-left">
+            <li>Name: {student.name}</li>
+            <li>Email: {student.email}</li>
+            <li>Year: {student.year}</li>
+            <li>Major: {student.major}</li>
           </ul>
       </div>
     );

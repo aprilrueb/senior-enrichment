@@ -7,18 +7,17 @@ export class Campuses extends Component {
     const campuses = this.props.campuses;
     return (
       <div>
-        <h1>The Best NYC Colleges</h1>
-          <ul className="campus-list">
+        <h3>The Best NYC Colleges</h3>
+          <ul className="float-left">
             {campuses.map(campus =>
-                <h3 key={campus.id}>
-                  <li>
+                  <li key={campus.id}>
                     <Link to={`/campuses/${campus.id}`}>
                       {campus.name}
                     </Link>
                   </li>
-                </h3>
               )}
-          </ul>
+              </ul>
+          <img src="/images/april-nyu.jpg" className="rounded float-right" />
       </div>
     );
   }

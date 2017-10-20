@@ -14,14 +14,18 @@ export class Campus extends Component {
     const campus = this.props.campus;
     return (
       <div>
-        <h1>College Information</h1>
-          <ul className="campus-details">
-            <li><h3>Name: {campus.name}</h3></li>
-            <li><h3>Phone: {campus.phone}</h3></li>
-            <li><h3>Address: {campus.address}</h3></li>
-            <img src={campus.image} />
-          </ul>
+      <img src={campus.image} className="rounded float-right" />
+      <div className="float-left">
+      <ul>
+        <h3>College Information</h3>
+            <li>Name: {campus.name}</li>
+            <li>Phone: {campus.phone}</li>
+            <li>Address: {campus.address}</li>
+            </ul>
+            <ul>
             {campus.students && <Students students={campus.students} />}
+            </ul>
+        </div>
       </div>
     );
   }
